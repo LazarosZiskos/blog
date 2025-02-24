@@ -9,6 +9,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        button: {
+          DEFAULT: "#E4E3E5",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
