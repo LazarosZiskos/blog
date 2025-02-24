@@ -6,15 +6,15 @@ import { ThemeChanger } from "./ThemeChanger";
 
 const Navbar = () => {
   return (
-    <nav className="container py-10">
-      <div className="flex justify-evenly items-center text-center">
+    <nav className="py-10">
+      <div className="flex justify-stretch items-center text-center">
         <div>
-          <h1 className="text-primary font-bold text-2xl tracking-wider">
+          <h1 className="text-primary font-bold text-2xl tracking-wide uppercase">
             Lazaros' Blog
           </h1>
         </div>
         <div>
-          <ul className="flex space-x-10 font-semibold">
+          <ul className="flex space-x-20 font-semibold">
             {navLinks.map((link) => (
               <Link key={link.id} href={link.href}>
                 <li>{link.title}</li>
