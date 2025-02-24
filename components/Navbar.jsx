@@ -1,11 +1,13 @@
+"use client";
 import React from "react";
 import { navLinks } from "@/constants";
 import Link from "next/link";
+import { ThemeChanger } from "./ThemeChanger";
 
 const Navbar = () => {
   return (
     <nav className="container py-10">
-      <div className="flex justify-evenly">
+      <div className="flex justify-evenly items-center text-center">
         <div>
           <h1 className="text-primary font-bold text-2xl tracking-wider">
             Lazaros' Blog
@@ -20,9 +22,8 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div>
-          <button>Theme changer</button>
-        </div>
+
+        <ThemeChanger />
       </div>
     </nav>
   );
