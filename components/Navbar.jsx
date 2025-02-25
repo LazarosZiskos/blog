@@ -7,11 +7,13 @@ import { ThemeChanger } from "./ThemeChanger";
 const Navbar = () => {
   return (
     <nav className="py-5">
-      <div className="flex justify-stretch items-center text-center">
+      <div className="flex justify-evenly items-center text-center">
         <div>
-          <h1 className="font-bold text-2xl tracking-wide uppercase">
-            Lazaros' Blog
-          </h1>
+          <a href="/">
+            <h1 className="font-bold text-2xl tracking-wide uppercase">
+              Lazaros' Blog
+            </h1>
+          </a>
         </div>
         <div>
           <ul className="flex space-x-20 font-semibold">
@@ -22,8 +24,9 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-
-        <ThemeChanger />
+        <div className="flex justify-end">
+          <ThemeChanger />
+        </div>
       </div>
     </nav>
   );
