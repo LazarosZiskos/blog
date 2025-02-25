@@ -6,10 +6,10 @@ import { ThemeChanger } from "./ThemeChanger";
 
 const Navbar = () => {
   return (
-    <nav className="py-10">
+    <nav className="py-5">
       <div className="flex justify-stretch items-center text-center">
         <div>
-          <h1 className="text-primary font-bold text-2xl tracking-wide uppercase">
+          <h1 className="font-bold text-2xl tracking-wide uppercase">
             Lazaros' Blog
           </h1>
         </div>

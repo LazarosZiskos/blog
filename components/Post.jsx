@@ -24,7 +24,8 @@ const Post = () => {
           <div className="">
             <div className="flex flex-col gap-5">
               <div className="text-xs font-bold text-[#696981] tracking-wide">
-                Published on February 25, 2024
+                Published on{" "}
+                <span className="text-primary">February 25, 2025</span>
               </div>
               <h2 className="font-bold text-2xl leading-[29px] tracking-normal ">
                 How AI Shapes the Future of Work in 2025
