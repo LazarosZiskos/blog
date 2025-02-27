@@ -4,11 +4,10 @@ import { navLinks } from "@/constants";
 import Link from "next/link";
 import { ThemeChanger } from "./ThemeChanger";
 import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const pathname = usePathname();
-  console.log(pathname);
+
   return (
     <nav className="py-5">
       <div className="flex justify-evenly items-center text-center">
@@ -25,7 +24,9 @@ const Navbar = () => {
               <Link
                 key={link.id}
                 href={link.href}
-                className={pathname === link.href && "bg-[#F2F2F6] rounded-sm"}
+                className={
+                  pathname === link.href ? "bg-[#F2F2F6] rounded-sm" : ""
+                }
               >
                 <li className="py-2 px-2 hover:bg-[#F2F2F6] rounded-sm leading-[19px] transition-all ease-out duration-500">
                   {link.title}
