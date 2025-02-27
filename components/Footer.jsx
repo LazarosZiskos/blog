@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -13,19 +14,31 @@ const Footer = () => {
         <div>
           <ul className="flex gap-4 pt-2">
             <li className="w-[30px]">
-              <button className="hover:scale-110">
+              <Link
+                href="https://github.com/LazarosZiskos"
+                target="blank"
+                className="hover:scale-110"
+              >
                 <img src="/github-sign.png" alt="github" />
-              </button>
+              </Link>
             </li>
             <li className="w-[30px]">
-              <button className="hover:scale-110">
+              <Link
+                href="https://www.linkedin.com/in/lazaros-ziskos/"
+                target="blank"
+                className="hover:scale-110"
+              >
                 <img src="/linkedin.png" alt="linkedIn" />
-              </button>
+              </Link>
             </li>
             <li className="w-[30px]">
-              <button className="hover:scale-110">
+              <Link
+                href="https://www.facebook.com/lazaros.ziskos"
+                target="blank"
+                className="hover:scale-110"
+              >
                 <img src="/facebook.png" alt="facebook" />
-              </button>
+              </Link>
             </li>
           </ul>
         </div>
