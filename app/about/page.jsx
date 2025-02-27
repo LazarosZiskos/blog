@@ -24,27 +24,41 @@ const page = () => {
             className="w-1/4 h-[500px] rounded-xl"
           />
         </div>
-        <div className="container w-[900px] mx-auto pt-5 leading-[30px] text-lg">
+        <div className="container w-[1000px] mx-auto pt-5 leading-[30px] text-lg">
           <p>
             Hi! I’m Lazaros, a 33-year-old husband, father, and aspiring
-            developer from Greece. <br />
-            Some of the things that bring me the most joy are coffee, traveling,
-            and spending time with my family (as you might guess from the photos
-            above!).
+            developer based in Greece. <br />
+            I am passionate about technology, coding, and all things creative. I
+            love building things, solving problems, and learning new skills.
+            Proof of that is that i swapping my career from a hotel owner to a
+            developer!
+            <br /> Some of the things that bring me the most joy are{" "}
+            <span className="font-bold">coffee, </span>
+            <span className="font-bold">travelling, </span> and spending time
+            with my <span className="font-bold">family </span> (as you might
+            guess from the photos above!).
             <br />I created this blog as my little corner of the internet—a
-            space where I can share my thoughts, ideas, and snippets of everyday
-            life. From tech news to personal experiences and random musings,
-            this is where I put it all. Writing helps me reflect, connect with
-            like-minded people, and document my journey, both as a developer and
-            in life.
+            space where I can share my{" "}
+            <span className="font-bold">thoughts,</span>{" "}
+            <span className="font-bold">ideas,</span> and{" "}
+            <span className="font-bold">snippets </span> of everyday life. From
+            tech news to personal experiences and random musings, this is where
+            I put it all. Writing helps me reflect, connect with like-minded
+            people, and document my journey, both as a developer and in life.
+            <br />
+            Apart from coding, I like spending my time gaming, reading, watching
+            movies, and playing the drums. I’m also a huge fan of outdoor
+            activities and love exploring new places.
             <br />
             I’m always exploring new things, whether it’s coding, discovering
             hidden travel spots, or just enjoying a quiet moment with a great
             cup of coffee. Life is a constant learning experience, and this blog
             is my way of capturing and sharing it.
             <br />
-            So, grab a cup of coffee, explore, and feel free to connect—I’d love
-            to hear from you!
+            <span className="font-bold text-lg">
+              So, grab a cup of coffee, explore, and feel free to connect—I’d
+              love to hear from you!
+            </span>
           </p>
         </div>
       </div>
