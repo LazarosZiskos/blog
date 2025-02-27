@@ -4,8 +4,6 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
@@ -48,11 +46,11 @@ const MobileNav = () => {
                 </SheetClose>
               ))}
             </ul>
-            <SheetClose asChild>
+            {/* <SheetClose asChild>
               <div className="w-full mx-auto mt-[40px]">
                 <ThemeChanger />
               </div>
-            </SheetClose>
+            </SheetClose> */}
           </div>
         </SheetContent>
       </Sheet>
