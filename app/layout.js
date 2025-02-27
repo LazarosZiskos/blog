@@ -9,8 +9,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata = {
-  title: "Welcome to my blog!",
-  description: "A blog created by Lazaros Ziskos",
+  title: "Blog by Lazaros",
+  description: "A blog created by Lazaros Ziskos using NextJS and Sanity CMS",
 };
 
 export default function RootLayout({ children }) {

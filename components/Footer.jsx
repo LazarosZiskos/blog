@@ -7,10 +7,12 @@ const Footer = () => {
       <div className="container flex flex-col items-center justify-center gap-2 pb-10">
         <div>
           <h1 className="font-bold text-2xl tracking-wide uppercase">
-            Lazaros' Blog
+            Lazaros's Blog
           </h1>
         </div>
-        <p>Thank you for reading my blog! Hope you had a great time!</p>
+        <p className="text-center">
+          Thank you for reading my blog! Hope you had a great time!
+        </p>
         <div>
           <ul className="flex gap-4 pt-2">
             <li className="w-[30px]">

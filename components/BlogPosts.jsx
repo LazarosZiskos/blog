@@ -3,7 +3,7 @@ import Post from "./Post";
 
 const BlogPosts = () => {
   return (
-    <section className="container mt-[64px] pb-[64px]">
+    <section className="mt-[64px] pb-[64px]">
       <Post
         image="/demo-image.webp"
         title="How AI Shapes the Future of Work in 2025"

@@ -15,7 +15,7 @@ const Navbar = () => {
         <div>
           <a href="/">
             <h1 className="font-bold text-sm md:text-2xl tracking-wide uppercase">
-              Lazaros' Blog
+              Lazaros's Blog
             </h1>
           </a>
         </div>
@@ -36,10 +36,10 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className="flex justify-end">
+        <div className=" justify-end hidden md:block">
           <ThemeChanger />
         </div>
-        <div>
+        <div className="md:hidden">
           <MobileNav />
         </div>
       </div>

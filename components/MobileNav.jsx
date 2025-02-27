@@ -13,6 +13,7 @@ import { Menu } from "lucide-react";
 import Link from "next/link";
 import { navLinks } from "@/constants";
 import { usePathname } from "next/navigation";
+import { ThemeChanger } from "./ThemeChanger";
 
 const MobileNav = () => {
   const pathname = usePathname();
@@ -33,9 +34,8 @@ const MobileNav = () => {
           <div className="flex flex-col text-center">
             <ul className="space-x-20 font-semibold py-2 px-2 text-center pt-[100px]">
               {navLinks.map((link) => (
-                <SheetClose asChild>
+                <SheetClose asChild key={link.id}>
                   <Link
-                    key={link.id}
                     href={link.href}
                     className={
                       pathname === link.href ? "bg-[#F2F2F6] rounded-sm" : ""
@@ -48,6 +48,11 @@ const MobileNav = () => {
                 </SheetClose>
               ))}
             </ul>
+            <SheetClose asChild>
+              <div className="w-full mx-auto mt-[40px]">
+                <ThemeChanger />
+              </div>
+            </SheetClose>
           </div>
         </SheetContent>
       </Sheet>

@@ -5,8 +5,8 @@ import Link from "next/link";
 const Post = ({ image, title, subtitle, tag1, tag2 }) => {
   return (
     <div>
-      <div className="lg:w-[900px] w-full mx-auto container border-b pt-[32px] pb-[32px]">
-        <div className="grid grid-cols-2 gap-4">
+      <div className="lg:w-[900px] w-full mx-auto border-b pt-[32px] pb-[32px]">
+        <div className="md:grid md:grid-cols-2 flex flex-col gap-4">
           <Link href="/post">
             <div className="relative hover:scale-105 transition-all ease-in-out">
               <img
@@ -25,7 +25,7 @@ const Post = ({ image, title, subtitle, tag1, tag2 }) => {
             </div>
           </Link>
           <div className="">
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-2 md:gap-5">
               <div className="text-xs font-bold text-[#696981] tracking-wide">
                 Published on{" "}
                 <span className="text-primary">February 25, 2025</span>
@@ -43,7 +43,7 @@ const Post = ({ image, title, subtitle, tag1, tag2 }) => {
                   {subtitle}
                 </p>
               </div>
-              <div>
+              <div className="">
                 <Button className="p-4 items-center border-none font-bold text-md bg-primary/85 hover:bg-primary hover:shadow-lg">
                   <Link href="/post">Read Article</Link>
                 </Button>

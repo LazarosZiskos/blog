@@ -38,12 +38,14 @@ const page = () => {
       <h2 className="text-3xl font-bold text-gray-800 mb-4">
         Feel Free to <span className="text-primary">Contact</span> Me!
       </h2>
-      <p className="text-gray-400 font-bold text-sm pb-10">
-        Feel free to reach out with any thoughts, ideas, or collaborations.{" "}
-        <br />
-        Whether it's tech talk, travel tips, or just a friendly chat—I'm all
-        ears!
-      </p>
+      <div className="flex flex-col container">
+        <p className="text-gray-400 font-bold text-sm pb-10">
+          Feel free to reach out with any thoughts, ideas, or collaborations.{" "}
+          <br />
+          Whether it's tech talk, travel tips, or just a friendly chat—I'm all
+          ears!
+        </p>
+      </div>
       <div className="max-w-md mx-auto bg-white p-6 rounded-2xl shadow-lg">
         <form onSubmit={handleSubmit} className="space-y-4">
           <input

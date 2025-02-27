@@ -2,29 +2,29 @@ import React from "react";
 
 const page = () => {
   return (
-    <section className="border-b mb-[64px] pb-10 mt-[64px]">
+    <section className="border-b mb-[64px] pb-10 mt-[30px] md:mt-[64px]">
       <div className="flex flex-col justify-center items-center">
-        <h1 className="text-5xl font-bold leading-[62px]">
+        <h1 className="md:text-5xl text-2xl font-bold leading-[40px] md:leading-[62px]">
           Hey, <span className="text-primary">Worderful</span> to Meet You
         </h1>
-        <div className="flex gap-3 container pt-10 w-full">
+        <div className="flex flex-col md:flex-row gap-3 container pt-10 w-full">
           <img
             src="/coffee5.jpg"
             alt="cofee"
-            className="w-2/4 h-[500px] rounded-xl"
+            className="md:w-2/4 md:h-[500px] h-[250px] rounded-xl"
           />
           <img
             src="/travel.jpg"
             alt="travel"
-            className="w-1/4 h-[500px] rounded-xl"
+            className="md:w-1/4 md:h-[500px] h-[350px] rounded-xl"
           />
           <img
             src="/family.jpg"
             alt="family"
-            className="w-1/4 h-[500px] rounded-xl"
+            className="md:w-1/4 md:h-[500px] h-[350px] rounded-xl"
           />
         </div>
-        <div className="container w-[1000px] mx-auto pt-5 leading-[30px] text-lg">
+        <div className="container md:w-[1000px] mx-auto pt-7 leading-[30px] text-[20px]">
           <p>
             Hi! I’m Lazaros, a 33-year-old husband, father, and aspiring
             developer based in Greece. <br />
