@@ -7,11 +7,9 @@ import TrendingTags from "@/components/TrendingTags";
 export default function Home() {
   return (
     <div className="container">
-      <Navbar />
       <Hero />
       <TrendingTags />
       <BlogPosts />
-      <Footer />
     </div>
   );
 }
