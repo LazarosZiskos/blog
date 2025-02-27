@@ -4,6 +4,7 @@ import { navLinks } from "@/constants";
 import Link from "next/link";
 import { ThemeChanger } from "./ThemeChanger";
 import { usePathname } from "next/navigation";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -13,13 +14,13 @@ const Navbar = () => {
       <div className="flex justify-evenly items-center text-center">
         <div>
           <a href="/">
-            <h1 className="font-bold text-2xl tracking-wide uppercase">
+            <h1 className="font-bold text-sm md:text-2xl tracking-wide uppercase">
               Lazaros' Blog
             </h1>
           </a>
         </div>
         <div>
-          <ul className="flex space-x-20 font-semibold py-2 px-2">
+          <ul className="space-x-20 font-semibold py-2 px-2 hidden md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.id}
@@ -37,6 +38,9 @@ const Navbar = () => {
         </div>
         <div className="flex justify-end">
           <ThemeChanger />
+        </div>
+        <div>
+          <MobileNav />
         </div>
       </div>
     </nav>
