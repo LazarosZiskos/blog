@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SanityLive } from "@/sanity/lib/live";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],

@@ -2,12 +2,12 @@ import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
-const Post = ({ image, title, subtitle, tag1, tag2 }) => {
+const Post = ({ link, image, title, subtitle, tag1, tag2 }) => {
   return (
     <div>
       <div className="lg:w-[900px] w-full mx-auto border-b pt-[32px] pb-[32px]">
         <div className="md:grid md:grid-cols-2 flex flex-col gap-4">
-          <Link href="/post">
+          <Link href={link}>
             <div className="relative hover:scale-105 transition-all ease-in-out">
               <img
                 src={image}
@@ -17,9 +17,6 @@ const Post = ({ image, title, subtitle, tag1, tag2 }) => {
               <div className="flex gap-2 absolute top-5 left-5 right-5">
                 <button className="uppercase px-2 py-1 bg-white rounded-[4px] border-none text-xs tracking-wider text-center font-bold">
                   {tag1}
-                </button>
-                <button className="uppercase px-2 py-1 bg-white rounded-[4px] border-none text-xs tracking-wider text-center font-bold">
-                  {tag2}
                 </button>
               </div>
             </div>
