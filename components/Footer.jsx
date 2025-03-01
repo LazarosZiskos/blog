@@ -11,7 +11,7 @@ const Footer = () => {
             className="font-mono font-bold tracking-wide uppercase hover:text-gray-600 dark:hover:text-gray-100 transition-colors"
           >
             <div className="flex flex-col items-center justify-center">
-              <h1 className="text-3xl pb-1">Debugging Life |</h1>
+              <h1 className="text-3xl pb-1">Debugging Life</h1>
               <h3 className="font-mono text-primary">Code, Family & Coffee</h3>
             </div>
           </Link>

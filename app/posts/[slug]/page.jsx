@@ -21,13 +21,18 @@ const page = async ({ params }) => {
 
   return (
     <main className="container">
-      <div className="md:flex md:flex-col justify-center items-center gap-4 pt-[135px] ">
+      <div className="md:flex md:flex-col justify-center items-center gap-4 pt-[200px] ">
         <div className="text-sm leading-[18px] text-center font-bold text-[#696981] dark:text-gray-400 tracking-wide">
           Published on{" "}
           <span className="text-primary">
-            {new Date(posts.publishedAt).toDateString()}
+            {new Date(posts.publishedAt).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
           </span>
         </div>
+
         <div className="">
           <h2 className="font-bold text-3xl lg:text-5xl leading-[40px] md:leading-[58px] tracking-normal mt-3 md:w-[900px] md:mx-auto text-center">
             {posts.title}

@@ -17,7 +17,7 @@ const MobileNav = () => {
   const pathname = usePathname();
 
   return (
-    <div>
+    <div className>
       <Sheet>
         <SheetTrigger>
           <Menu />
@@ -26,8 +26,16 @@ const MobileNav = () => {
         <SheetContent className="bg-white dark:bg-black">
           <SheetTitle className="font-bold text-black">
             <SheetClose asChild>
-              <Link href="/" className="dark:text-white">
-                Lazaros' Blog
+              <Link
+                href="/"
+                className="font-mono font-bold tracking-wide uppercase hover:text-gray-600 dark:hover:text-gray-100 transition-colors"
+              >
+                <div className="flex flex-col items-center justify-center pt-10">
+                  <h1 className="text-2xl pb-1">Debugging Life</h1>
+                  <h3 className="font-mono text-sm text-primary">
+                    Code, Family & Coffee
+                  </h3>
+                </div>
               </Link>
             </SheetClose>
           </SheetTitle>
