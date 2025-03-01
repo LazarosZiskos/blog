@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ThemeChanger } from "./ThemeChanger";
 import { usePathname } from "next/navigation";
 import MobileNav from "./MobileNav";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -26,10 +27,12 @@ const Navbar = () => {
                 key={link.id}
                 href={link.href}
                 className={
-                  pathname === link.href ? "bg-[#F2F2F6] rounded-sm" : ""
+                  pathname === link.href
+                    ? "bg-[#F2F2F6] dark:text-black rounded-sm"
+                    : ""
                 }
               >
-                <li className="py-2 px-2 hover:bg-[#F2F2F6] rounded-sm leading-[19px] transition-all ease-out duration-500">
+                <li className="py-2 px-2 hover:bg-[#F2F2F6] dark:hover:text-black rounded-sm leading-[19px] transition-all ease-out duration-500">
                   {link.title}
                 </li>
               </Link>
@@ -39,6 +42,7 @@ const Navbar = () => {
         {/* <div className=" justify-end hidden md:block">
           <ThemeChanger />
         </div> */}
+        <ThemeToggle />
         <div className="md:hidden">
           <MobileNav />
         </div>

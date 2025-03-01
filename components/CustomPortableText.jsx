@@ -15,7 +15,9 @@ const CustomPortableText = ({ value }) => {
       h2: ({ children }) => (
         <h2 className="text-3xl font-semibold py-5">{children}</h2>
       ),
-      normal: ({ children }) => <p className="text-gray-700">{children}</p>,
+      normal: ({ children }) => (
+        <p className="text-gray-800 dark:text-gray-400">{children}</p>
+      ),
     },
     marks: {
       strong: ({ children }) => (

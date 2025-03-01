@@ -19,7 +19,7 @@ const Footer = () => {
               <Link
                 href="https://github.com/LazarosZiskos"
                 target="blank"
-                className="hover:scale-110"
+                className="hover:scale-110 dark:invert"
               >
                 <img src="/github-sign.png" alt="github" />
               </Link>
@@ -28,7 +28,7 @@ const Footer = () => {
               <Link
                 href="https://www.linkedin.com/in/lazaros-ziskos/"
                 target="blank"
-                className="hover:scale-110"
+                className="hover:scale-110 dark:invert"
               >
                 <img src="/linkedin.png" alt="linkedIn" />
               </Link>
@@ -37,14 +37,16 @@ const Footer = () => {
               <Link
                 href="https://www.facebook.com/lazaros.ziskos"
                 target="blank"
-                className="hover:scale-110"
+                className="hover:scale-110 dark:invert"
               >
                 <img src="/facebook.png" alt="facebook" />
               </Link>
             </li>
           </ul>
         </div>
-        <div className="text-sm text-gray-400">© 2025 All Rights Reserved.</div>
+        <div className="text-sm text-gray-400">
+          © 2025 All Rights Reserved.
+        </div>
       </div>
     </footer>
   );

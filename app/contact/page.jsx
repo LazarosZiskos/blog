@@ -35,11 +35,11 @@ const page = () => {
 
   return (
     <section className="mt-[64px] mb-[64px] border-b pb-[64px] text-center">
-      <h2 className="text-3xl font-bold text-gray-800 mb-4">
+      <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">
         Feel Free to <span className="text-primary">Contact</span> Me!
       </h2>
       <div className="flex flex-col container">
-        <p className="text-gray-400 font-bold text-sm pb-10">
+        <p className="text-gray-400 font-bold text-sm pb-10 dark:text-gray-400">
           Feel free to reach out with any thoughts, ideas, or collaborations.{" "}
           <br />
           Whether it's tech talk, travel tips, or just a friendly chat—I'm all

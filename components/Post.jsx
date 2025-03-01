@@ -15,7 +15,7 @@ const Post = ({ link, image, title, subtitle, tag1, tag2 }) => {
                 className="rounded-2xl h-full w-full max-h-[270px] object-cover"
               />
               <div className="flex gap-2 absolute top-5 left-5 right-5">
-                <button className="uppercase px-2 py-1 bg-white rounded-[4px] border-none text-xs tracking-wider text-center font-bold">
+                <button className="uppercase px-2 py-1 bg-white dark:text-black rounded-[4px] border-none text-xs tracking-wider text-center font-bold">
                   {tag1}
                 </button>
               </div>

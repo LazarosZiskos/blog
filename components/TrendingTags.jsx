@@ -5,7 +5,7 @@ const TrendingTags = () => {
   return (
     <main className="mt-[64px]">
       <div className="flex flex-col items-center justify-center gap-4">
-        <h3 className="uppercase text-xs text-[#696981] font-bold pb-6 tracking-widest">
+        <h3 className="uppercase text-xs text-[#696981] dark:text-gray-300 font-bold pb-6 tracking-widest">
           explore trending tags
         </h3>
         <div className="w-full flex gap-5 flex-wrap max-w-[900px] justify-center">

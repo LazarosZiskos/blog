@@ -22,31 +22,31 @@ const page = async ({ params }) => {
   return (
     <main className="container">
       <div className="md:flex md:flex-col justify-center items-center gap-4 pt-8 ">
-        <div className="text-sm leading-[18px] text-center font-bold text-[#696981] tracking-wide">
+        <div className="text-sm leading-[18px] text-center font-bold text-[#696981] dark:text-gray-400 tracking-wide">
           Published on{" "}
           <span className="text-primary">
             {new Date(posts.publishedAt).toDateString()}
           </span>
         </div>
         <div className="">
-          <h2 className="font-bold text-3xl md:text-5xl leading-[40px] md:leading-[58px] tracking-normal mt-3 md:w-[900px] md:mx-auto text-center">
+          <h2 className="font-bold text-3xl lg:text-5xl leading-[40px] md:leading-[58px] tracking-normal mt-3 md:w-[900px] md:mx-auto text-center">
             {posts.title}
           </h2>
 
           <div>
-            <p className="text-[#696981] tracking-wider text-center text-md md:leading-[28px] mt-4 md:w-[700px] mx-auto">
+            <p className="text-[#696981] dark:text-gray-400 tracking-wider text-center text-md md:leading-[28px] mt-4 md:w-[700px] mx-auto">
               {posts.subheader}
             </p>
           </div>
           <div className="flex items-center justify-center gap-6  mt-4">
-            <button className="uppercase px-2 py-1 shadow-[0_20px_50px_rgba(8,_112,_184,_0.3)] rounded-[4px] border-none text-xs tracking-wider text-center font-bold hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.5)]">
+            <button className="dark:bg-white dark:text-black hover:scale-110 transition-all ease-in-out duration-300 uppercase px-2 py-1 shadow-[0_20px_50px_rgba(8,_112,_184,_0.3)] rounded-[4px] border-none text-xs tracking-wider text-center font-bold hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.5)]">
               {posts.tags.name}
             </button>
           </div>
           <div className="mt-4">
             <img
               src={urlFor(posts.mainImage).url()}
-              className="rounded-2xl w-full max-h-[500px] object-cover"
+              className="rounded-2xl w-[450px] lg:w-full max-h-[500px] object-cover"
             />
           </div>
         </div>
@@ -59,23 +59,35 @@ const page = async ({ params }) => {
             <ul className="flex gap-6 pt-2 items-center justify-center">
               <li className="w-[30px]">
                 <button className="hover:scale-110">
-                  <img src="/twitter.png" alt="twitter" />
+                  <img
+                    src="/twitter.png"
+                    alt="twitter"
+                    className="dark:invert"
+                  />
                 </button>
               </li>
               <li className="w-[30px]">
                 <button className="hover:scale-110">
-                  <img src="/like (1).png" alt="facebook" />
+                  <img
+                    src="/like (1).png"
+                    alt="facebook"
+                    className="dark:invert"
+                  />
                 </button>
               </li>
               <li className="w-[30px]">
                 <button className="hover:scale-110">
-                  <img src="/send.png" alt="shareIcon" />
+                  <img
+                    src="/send.png"
+                    alt="shareIcon"
+                    className="dark:invert"
+                  />
                 </button>
               </li>
             </ul>
           </div>
         </div>
-        <div className="flex flex-col md:w-[800px] leading-[25px] md:leading-[30px] pt-10 pb-[64px] border-b mb-10">
+        <div className="flex flex-col md:w-[700px] leading-[25px] md:leading-[30px] pt-10 pb-[64px] border-b mb-10">
           <CustomPortableText value={posts.body} />
         </div>
       </div>
