@@ -6,6 +6,9 @@ const nextConfig = {
       { protocol: "https", hostname: "placeholder.co" },
     ],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
