@@ -24,6 +24,15 @@ const Footer = () => {
           <ul className="flex gap-4 pt-2">
             <li className="w-[30px]">
               <Link
+                href="https://lazaros-portfolio.vercel.app/"
+                target="blank"
+                className="hover:scale-110 dark:invert"
+              >
+                <img src="/portfolio.png" alt="portfolio" />
+              </Link>
+            </li>
+            <li className="w-[30px]">
+              <Link
                 href="https://github.com/LazarosZiskos"
                 target="blank"
                 className="hover:scale-110 dark:invert"
