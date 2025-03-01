@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="pt-[64px]">
       <div className="flex flex-col text-center border-b pb-[64px]">
-        <h1 className="md:text-5xl text-3xl w-full max-w-[900px] mx-auto font-bold leading-[40px] md:leading-[62px] text-[#29294b] dark:text-[#a1a1d6]">
+        <h1 className="md:text-5xl text-3xl w-full h-[160px] max-w-[900px] mx-auto font-bold leading-[40px] md:leading-[62px] text-[#29294b] dark:text-[#a1a1d6]">
           Welcome to My World - Where I Share My{" "}
           <span className="text-primary">
             <ReactRotatingText items={["Thoughts", "Ideas", "Stories"]} />{" "}

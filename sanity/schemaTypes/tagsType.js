@@ -21,5 +21,10 @@ export const tagsType = defineType({
         source: "name",
       },
     }),
+    defineField({
+      name: "image",
+      title: "Image",
+      type: "image",
+    }),
   ],
 });

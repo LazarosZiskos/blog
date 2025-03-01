@@ -1,7 +1,22 @@
 import React from "react";
-import { Button } from "./ui/button";
+import TagButton from "./TagButton";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
+import Link from "next/link";
 
-const TrendingTags = () => {
+const getTags = async () => {
+  const query = `*[_type == 'tags']{
+  name,
+    image,
+    slug
+}`;
+  const data = await client.fetch(query);
+  return data;
+};
+
+const TrendingTags = async () => {
+  const tags = await getTags();
+
   return (
     <main className="mt-[64px]">
       <div className="flex flex-col items-center justify-center gap-4">
@@ -9,34 +24,15 @@ const TrendingTags = () => {
           explore trending tags
         </h3>
         <div className="w-full flex gap-5 flex-wrap max-w-[900px] justify-center">
-          <Button variant="outline" className="flex">
-            <img src="/laptop.png" alt="laptop" className="w-[25px]" />
-            Technology
-          </Button>
-          <Button variant="outline" className="flex">
-            <img src="/luggage.png" alt="laptop" className="w-[25px]" />
-            Travel
-          </Button>
-          <Button variant="outline" className="flex">
-            <img src="/investment.png" alt="laptop" className="w-[25px]" />
-            Business
-          </Button>
-          <Button variant="outline" className="flex">
-            <img src="/world-news.png" alt="laptop" className="w-[25px]" />
-            News
-          </Button>
-          <Button variant="outline" className="flex">
-            <img src="/happy.png" alt="laptop" className="w-[25px]" />
-            Family
-          </Button>
-          <Button variant="outline" className="flex">
-            <img src="/planet-earth.png" alt="laptop" className="w-[25px]" />
-            General
-          </Button>
-          <Button variant="outline" className="flex">
-            <img src="/standup-comedy.png" alt="laptop" className="w-[25px]" />
-            Comedy
-          </Button>
+          {tags.map((tag) => (
+            <Link href={`/tags/${tag.slug.current}`} key={tag.name}>
+              <TagButton
+                key={tag.name}
+                title={tag.name}
+                img={urlFor(tag.image).url()}
+              />
+            </Link>
+          ))}
         </div>
       </div>
     </main>
