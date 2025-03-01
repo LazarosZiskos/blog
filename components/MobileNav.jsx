@@ -32,7 +32,7 @@ const MobileNav = () => {
               >
                 <div className="flex flex-col items-center justify-center pt-10">
                   <h1 className="text-2xl pb-1">Debugging Life</h1>
-                  <h3 className="font-mono text-sm text-primary">
+                  <h3 className="font-mono text-xs text-primary">
                     Code, Family & Coffee
                   </h3>
                 </div>
