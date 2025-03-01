@@ -11,7 +11,7 @@ import { Menu } from "lucide-react";
 import Link from "next/link";
 import { navLinks } from "@/constants";
 import { usePathname } from "next/navigation";
-import { ThemeChanger } from "./ThemeChanger";
+import ThemeToggle from "./ThemeToggle";
 
 const MobileNav = () => {
   const pathname = usePathname();
@@ -23,10 +23,12 @@ const MobileNav = () => {
           <Menu />
         </SheetTrigger>
 
-        <SheetContent className="bg-white">
+        <SheetContent className="bg-white dark:bg-black">
           <SheetTitle className="font-bold text-black">
             <SheetClose asChild>
-              <Link href="/">Lazaros' Blog</Link>
+              <Link href="/" className="dark:text-white">
+                Lazaros' Blog
+              </Link>
             </SheetClose>
           </SheetTitle>
           <div className="flex flex-col text-center">
@@ -46,11 +48,11 @@ const MobileNav = () => {
                 </SheetClose>
               ))}
             </ul>
-            {/* <SheetClose asChild>
-              <div className="w-full mx-auto mt-[40px]">
-                <ThemeChanger />
+            <SheetClose asChild>
+              <div className="flex items-center justify-center mt-10">
+                <ThemeToggle />
               </div>
-            </SheetClose> */}
+            </SheetClose>
           </div>
         </SheetContent>
       </Sheet>

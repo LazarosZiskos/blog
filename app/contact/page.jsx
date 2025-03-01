@@ -46,7 +46,7 @@ const page = () => {
           ears!
         </p>
       </div>
-      <div className="max-w-md mx-auto bg-white p-6 rounded-2xl shadow-lg">
+      <div className="md:max-w-md max-w-sm mx-auto bg-white p-6 rounded-2xl shadow-lg">
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="text"

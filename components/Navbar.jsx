@@ -2,7 +2,6 @@
 import React from "react";
 import { navLinks } from "@/constants";
 import Link from "next/link";
-import { ThemeChanger } from "./ThemeChanger";
 import { usePathname } from "next/navigation";
 import MobileNav from "./MobileNav";
 import ThemeToggle from "./ThemeToggle";
@@ -42,7 +41,9 @@ const Navbar = () => {
         {/* <div className=" justify-end hidden md:block">
           <ThemeChanger />
         </div> */}
-        <ThemeToggle />
+        <div className="justify-end hidden md:block">
+          <ThemeToggle />
+        </div>
         <div className="md:hidden">
           <MobileNav />
         </div>
