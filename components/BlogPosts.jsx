@@ -4,15 +4,15 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
 const getPosts = async () => {
-  const query = `*[_type == 'post']{
-  title,
+  const query = `*[_type == 'post'] | order(publishedAt desc) {
+    title,
     subheader,
     slug,
     publishedAt,
     mainImage,
     body,
     tags[]->{name}
-}`;
+  }`;
   const data = await client.fetch(query);
   return data;
 };
@@ -30,6 +30,7 @@ const BlogPosts = async () => {
             title={post.title}
             subtitle={post.subheader}
             tag1={post.tags[0].name}
+            publishedAt={post.publishedAt}
           />
         ))}
     </section>

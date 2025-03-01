@@ -4,7 +4,7 @@ import Post from "@/components/Post";
 import { urlFor } from "@/sanity/lib/image";
 
 const getTagPosts = async (slug) => {
-  const query = `*[_type == "post" && count((tags[]->slug.current)[@ == "${slug}"]) > 0] {
+  const query = `*[_type == "post" && count((tags[]->slug.current)[@ == "${slug}"]) > 0] | order(publishedAt desc) {
     title,
     body,
     mainImage,
@@ -30,6 +30,7 @@ const page = async ({ params }) => {
           subtitle={post.subheader}
           tag1={params.slug}
           image={urlFor(post.mainImage).url()}
+          publishedAt={post.publishedAt}
         />
       ))}
     </section>

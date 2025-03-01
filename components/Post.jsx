@@ -16,7 +16,7 @@ const getPost = async (slug) => {
   return data;
 };
 
-const Post = async ({ link, image, title, subtitle, tag1 }) => {
+const Post = async ({ link, image, title, subtitle, tag1, publishedAt }) => {
   return (
     <div>
       <div className="lg:w-[900px] w-full mx-auto border-b pt-[32px] pb-[32px]">
@@ -39,7 +39,13 @@ const Post = async ({ link, image, title, subtitle, tag1 }) => {
             <div className="flex flex-col gap-2 md:gap-5">
               <div className="text-xs font-bold text-[#696981] tracking-wide">
                 Published on{" "}
-                <span className="text-primary">February 25, 2025</span>
+                <span className="text-primary">
+                  {new Date(publishedAt).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </span>
               </div>
               <Link
                 href={link}
