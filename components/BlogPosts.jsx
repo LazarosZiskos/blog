@@ -11,7 +11,7 @@ const getPosts = async () => {
     publishedAt,
     mainImage,
     body,
-    tags->{name}
+    tags[]->{name}
 }`;
   const data = await client.fetch(query);
   return data;
@@ -19,7 +19,6 @@ const getPosts = async () => {
 
 const BlogPosts = async () => {
   const posts = await getPosts();
-  console.log(posts[0].tags.name);
   return (
     <section className="mt-[64px] pb-[64px]">
       {posts.length > 0 &&
@@ -30,7 +29,7 @@ const BlogPosts = async () => {
             image={urlFor(post.mainImage).url()}
             title={post.title}
             subtitle={post.subheader}
-            tag1={post.tags.name}
+            tag1={post.tags[0].name}
           />
         ))}
     </section>

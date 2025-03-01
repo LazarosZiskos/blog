@@ -1,8 +1,22 @@
 import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { client } from "@/sanity/lib/client";
 
-const Post = ({ link, image, title, subtitle, tag1, tag2 }) => {
+const getPost = async (slug) => {
+  const query = `*[_type == 'post' && slug.current == "${slug}"][0]{
+  title,
+  subheader,
+    publishedAt,
+    mainImage,
+    body,
+    tags[]->{name}
+}`;
+  const data = await client.fetch(query);
+  return data;
+};
+
+const Post = async ({ link, image, title, subtitle, tag1 }) => {
   return (
     <div>
       <div className="lg:w-[900px] w-full mx-auto border-b pt-[32px] pb-[32px]">

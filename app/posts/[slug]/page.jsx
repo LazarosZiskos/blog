@@ -1,7 +1,6 @@
 import CustomPortableText from "@/components/CustomPortableText";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
-import { PortableText } from "@portabletext/react";
 
 const getPost = async (slug) => {
   const query = `*[_type == 'post' && slug.current == "${slug}"][0]{
@@ -10,7 +9,7 @@ const getPost = async (slug) => {
     publishedAt,
     mainImage,
     body,
-    tags->{name}
+    tags[]->{name}
 }`;
   const data = await client.fetch(query);
   return data;
@@ -39,9 +38,11 @@ const page = async ({ params }) => {
             </p>
           </div>
           <div className="flex items-center justify-center gap-6  mt-4">
-            <button className="dark:bg-white dark:text-black hover:scale-110 transition-all ease-in-out duration-300 uppercase px-2 py-1 shadow-[0_20px_50px_rgba(8,_112,_184,_0.3)] rounded-[4px] border-none text-xs tracking-wider text-center font-bold hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.5)]">
-              {posts.tags.name}
-            </button>
+            {posts?.tags?.map((tag) => (
+              <button className="dark:bg-white dark:text-black hover:scale-110 transition-all ease-in-out duration-300 uppercase px-2 py-1 shadow-[0_20px_50px_rgba(8,_112,_184,_0.3)] rounded-[4px] border-none text-xs tracking-wider text-center font-bold hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.5)]">
+                {tag.name}
+              </button>
+            ))}
           </div>
           <div className="mt-4">
             <img
