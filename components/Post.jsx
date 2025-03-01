@@ -12,7 +12,7 @@ const Post = ({ link, image, title, subtitle, tag1, tag2 }) => {
               <img
                 src={image}
                 alt="demo"
-                className="rounded-2xl h-full w-full max-h-[250px] object-cover"
+                className="rounded-2xl h-full w-full max-h-[270px] object-cover"
               />
               <div className="flex gap-2 absolute top-5 left-5 right-5">
                 <button className="uppercase px-2 py-1 bg-white rounded-[4px] border-none text-xs tracking-wider text-center font-bold">
@@ -28,7 +28,7 @@ const Post = ({ link, image, title, subtitle, tag1, tag2 }) => {
                 <span className="text-primary">February 25, 2025</span>
               </div>
               <Link
-                href="/post"
+                href={link}
                 className="hover:text-gray-400 transition-all ease-in-out duration-200"
               >
                 <h2 className="font-bold text-2xl leading-[29px] tracking-normal hover:text-gray-400">
@@ -42,7 +42,7 @@ const Post = ({ link, image, title, subtitle, tag1, tag2 }) => {
               </div>
               <div className="">
                 <Button className="p-4 items-center border-none font-bold text-md bg-primary/85 hover:bg-primary hover:shadow-lg">
-                  <Link href="/post">Read Article</Link>
+                  <Link href={link}>Read More</Link>
                 </Button>
               </div>
             </div>

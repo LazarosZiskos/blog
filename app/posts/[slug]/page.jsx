@@ -1,3 +1,4 @@
+import CustomPortableText from "@/components/CustomPortableText";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
@@ -19,21 +20,21 @@ const page = async ({ params }) => {
   const posts = await getPost(params.slug);
 
   return (
-    <main>
-      <div className="flex flex-col justify-center items-center gap-4 pt-8 ">
-        <div className="text-sm leading-[18px] font-bold text-[#696981] tracking-wide">
+    <main className="container">
+      <div className="md:flex md:flex-col justify-center items-center gap-4 pt-8 ">
+        <div className="text-sm leading-[18px] text-center font-bold text-[#696981] tracking-wide">
           Published on{" "}
           <span className="text-primary">
             {new Date(posts.publishedAt).toDateString()}
           </span>
         </div>
         <div className="">
-          <h2 className="font-bold text-5xl leading-[58px] tracking-normal mt-3 w-[900px] mx-auto text-center">
+          <h2 className="font-bold text-3xl md:text-5xl leading-[40px] md:leading-[58px] tracking-normal mt-3 md:w-[900px] md:mx-auto text-center">
             {posts.title}
           </h2>
 
           <div>
-            <p className="text-[#696981] tracking-wider text-center text-md leading-[28px] mt-4 w-[700px] mx-auto">
+            <p className="text-[#696981] tracking-wider text-center text-md md:leading-[28px] mt-4 md:w-[700px] mx-auto">
               {posts.subheader}
             </p>
           </div>
@@ -49,7 +50,7 @@ const page = async ({ params }) => {
             />
           </div>
         </div>
-        <div className="flex items-center justify-center gap-6">
+        <div className="flex items-center justify-center gap-6 pt-7">
           <div className="rounded-full w-20 h-20 shadow-[0_20px_50px_rgba(8,_112,_184,_0.4)] font-semibold  flex flex-col items-center justify-center">
             <span>3 min</span>
             <span>read</span>
@@ -74,8 +75,8 @@ const page = async ({ params }) => {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col w-[800px] leading-[30px] pt-10 pb-[64px] border-b mb-10">
-          <PortableText value={posts.body} />
+        <div className="flex flex-col md:w-[800px] leading-[25px] md:leading-[30px] pt-10 pb-[64px] border-b mb-10">
+          <CustomPortableText value={posts.body} />
         </div>
       </div>
     </main>
