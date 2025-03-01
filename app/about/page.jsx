@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <section className="border-b mb-[64px] pb-10 mt-[30px] md:mt-[64px]">
+    <section className="border-b mb-[64px] pb-10 mt-[30px] pt-[120px] md:mt-[64px]">
       <div className="flex flex-col justify-center items-center">
         <h1 className="md:text-5xl text-2xl font-bold leading-[40px] md:leading-[62px]">
           Hey, <span className="text-primary">Worderful</span> to Meet You

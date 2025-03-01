@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-dm-sans)", "sans-serif"], // Default
+        mono: ["var(--font-jetbrains)", "monospace"], // For code-like elements
+      },
       colors: {
         button: {
           DEFAULT: "#E4E3E5",

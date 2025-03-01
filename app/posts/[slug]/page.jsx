@@ -21,7 +21,7 @@ const page = async ({ params }) => {
 
   return (
     <main className="container">
-      <div className="md:flex md:flex-col justify-center items-center gap-4 pt-8 ">
+      <div className="md:flex md:flex-col justify-center items-center gap-4 pt-[135px] ">
         <div className="text-sm leading-[18px] text-center font-bold text-[#696981] dark:text-gray-400 tracking-wide">
           Published on{" "}
           <span className="text-primary">

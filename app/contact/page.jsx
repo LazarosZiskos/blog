@@ -34,7 +34,7 @@ const page = () => {
   };
 
   return (
-    <section className="mt-[64px] mb-[64px] border-b pb-[64px] text-center">
+    <section className="pt-[128px] mb-[64px] border-b pb-[64px] text-center">
       <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">
         Feel Free to <span className="text-primary">Contact</span> Me!
       </h2>

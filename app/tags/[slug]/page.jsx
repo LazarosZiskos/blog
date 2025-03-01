@@ -21,7 +21,7 @@ const page = async ({ params }) => {
   const posts = await getTagPosts(params.slug);
   console.log(params.slug);
   return (
-    <section className="mt-[64px] pb-[64px]">
+    <section className="pt-[128px] pb-[64px]">
       {posts.map((post) => (
         <Post
           key={post.title}

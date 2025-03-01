@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { navLinks } from "@/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -8,18 +8,40 @@ import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="py-5">
-      <div className="flex justify-around items-center text-center space-x-[100px] container">
-        <div className="">
-          <a href="/">
-            <h1 className="font-bold text-xs sm:text-sm md:text-2xl md:tracking-wide uppercase">
-              Lazaros's <span className="text-primary">Blog</span>
-            </h1>
-          </a>
-        </div>
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-md dark:bg-gray-900" : "bg-transparent"
+      }`}
+    >
+      <div className="grid grid-cols-3 items-center text-center space-x-[100px] container py-5">
         <div>
+          <Link
+            href="/"
+            className="font-mono font-bold tracking-wide uppercase hover:text-gray-600 dark:hover:text-gray-100 transition-colors"
+          >
+            <div className="flex flex-col items-center justify-center">
+              <h1 className="text-3xl pb-1">Debugging Life |</h1>
+              <h3 className="font-mono text-primary">Code, Family & Coffee</h3>
+            </div>
+          </Link>
+        </div>
+        <div className="">
           <ul className="space-x-5 font-semibold py-2 px-2 hidden md:flex">
             {navLinks.map((link) => (
               <Link
@@ -38,9 +60,6 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        {/* <div className=" justify-end hidden md:block">
-          <ThemeChanger />
-        </div> */}
         <div className="justify-end hidden md:block">
           <ThemeToggle />
         </div>
