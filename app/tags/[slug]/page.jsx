@@ -13,7 +13,7 @@ const getTagPosts = async (slug) => {
     slug,
     tags[]->{name, slug}
   }`;
-  const data = await client.fetch(query, {}, { next: { revalidate: 60 } });
+  const data = await client.fetch(query);
   return data;
 };
 
