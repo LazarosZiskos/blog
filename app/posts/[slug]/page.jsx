@@ -12,7 +12,7 @@ const getPost = async (slug) => {
     body,
     tags[]->{name}
 }`;
-  const data = await client.fetch(query);
+  const data = await client.fetch(query, {}, { next: { revalidate: 60 } });
   return data;
 };
 
